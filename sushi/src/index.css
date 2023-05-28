@@ -1,5 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+:root{
+  --rojo: #800020;
+  --Negro: #000000;
+  --Blanco: #FFFFFF;
+  --Verde: #008000;
+}
+
 *{
   border: none;
   margin: 0;
