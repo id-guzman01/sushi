@@ -1,12 +1,12 @@
-import './App.css'
-import Products from './components/Products'
+import "./App.css";
+import Catalogo_sushi from "./components/Catalogo";
 
 const App = () => {
   return (
     <>
-      <Products/>
+      <Catalogo_sushi />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
