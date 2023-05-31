@@ -1,198 +1,198 @@
-#pie_pagina{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 140px 150px 50px;
-    grid-template-areas: 
+#pie_pagina {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 140px 150px 50px;
+  grid-template-areas:
     "logo informacion"
     "encuentranos informacion"
     "derechos derechos";
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    border-top: 1px solid var(--rojo);
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  border-top: 1px solid var(--rojo);
 }
 
 /*Asignar posiciones en la grilla*/
-#content_img{
-    display: block;
-    grid-area: logo;
-    width: 150px;
-    height: 150px;
-    margin: -0.5% 0 0 20%;
+#content_img {
+  display: block;
+  grid-area: logo;
+  width: 150px;
+  height: 150px;
+  margin: -0.5% 0 0 20%;
 }
 
-#encuentranos{
-    grid-area: encuentranos;
-    margin: 0 0 0 20%;
+#encuentranos {
+  grid-area: encuentranos;
+  margin: 0 0 0 20%;
 }
 
-#informacion{
-    grid-area: informacion;
-    margin: 2% 0 0 0;
+#informacion {
+  grid-area: informacion;
+  margin: 2% 0 0 0;
 }
 
+<<<<<<< HEAD
 #redes{
     grid-area: encuentranos;
     margin: 17.5% 0 0 25%;
+=======
+#redes {
+  grid-area: encuentranos;
+  margin: 19% 0 0 23%;
+>>>>>>> 925128834f0ebd47a2c7be4ffaed3b4abd3d8955
 }
 
-#derechos{
-    grid-area: derechos;
-    text-align: center;
-    margin-top: 0.8%;
-    font-size: 17px;
+#derechos {
+  grid-area: derechos;
+  text-align: center;
+  margin-top: 0.8%;
+  font-size: 17px;
 }
 
 /*Estilos para los titulos*/
-.subtitulo_footer{
-    font-size: 26px;
-    margin-bottom: 0.5%;
+.subtitulo_footer {
+  font-size: 26px;
+  margin-bottom: 0.5%;
 }
 
 /*Estilos para la dirección, telefono y el email*/
-.encuentranos_footer{
-    font-size: 19px;
+.encuentranos_footer {
+  font-size: 19px;
 }
 
 /*Estilos para las redes sociales*/
-.btn_social{
-    margin-right: 12px;
-    color: white;
-    font-size: 15px;
-    padding: 5px;
-    border-radius: 50%;
-    background: black;
-    text-align: center;
-    
+.btn_social {
+  margin-right: 12px;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 50%;
+  background: black;
+  text-align: center;
 }
 
-.btn_social:hover{
-    transition: 0.15s ease;
-    background: var(--rojo);
+.btn_social:hover {
+  transition: 0.15s ease;
+  background: var(--rojo);
 }
 
 /*Estilos de los details*/
-.details_footer { 
-    background-color: #f6f8fa;
-    width: 90%;
-    margin-bottom: 0.5%;   
-    border-radius: 8px;  
-    border: 1px solid #d8e0e9;
+.details_footer {
+  background-color: #f6f8fa;
+  width: 90%;
+  margin-bottom: 0.5%;
+  border-radius: 8px;
+  border: 1px solid #d8e0e9;
+  position: relative;
+  margin-top: 0.5%;
+}
+
+.summary_footer {
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.text_details_footer {
+  padding: 0.5%;
+  margin: 0.8%;
+  background: #f6f8fa;
+  border-left: 2px solid var(--rojo);
+}
+
+.details_footer[open] {
+  background: var(--blanco);
+}
+
+@media screen and (max-width: 720px) {
+  #pie_pagina {
     position: relative;
-    margin-top: 0.5%; 
+  }
+  #content_img {
+    width: 130px;
+    height: 130px;
+    margin: -0.5% 0 0 22.5%;
   }
 
-  .summary_footer{  
-    font-size: 18px;
-    padding: 5px;
-    cursor: pointer;
-    list-style: none;
+  #encuentranos {
+    margin: -5% 0 0 20%;
   }
 
-  .text_details_footer{
-    padding: 0.5%;
-    margin: 0.8%;
-    background: #f6f8fa;
-    border-left: 2px solid var(--rojo);
-  }
-  
-  .details_footer[open] {
-    background: var(--blanco);
+  #redes {
+    grid-area: encuentranos;
+    margin: 33% 0 0 27%;
   }
 
-@media screen and (max-width:720px){
-
-    #content_img{
-        width: 130px;
-        height: 130px;
-        margin: -0.5% 0 0 22.5%;
-    }
-
-    #encuentranos{
-        margin: -5% 0 0 20%;
-    }
-    
-    #redes{
-        grid-area: encuentranos;
-        margin: 33% 0 0 27%;
-    }
-
-    #informacion{
-        margin: 8% 0 0 0;
-    }
-
+  #informacion {
+    margin: 8% 0 0 0;
+  }
 }
 
-@media screen and (max-width:670px){
+@media screen and (max-width: 670px) {
+  #pie_pagina {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px 50px 250px 50px;
+  }
 
-    #pie_pagina{
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 100px 50px 250px 50px;
-    }
-    
-    /*Asignar posiciones en la grilla*/
-    #content_img{
-        grid-column: 1;
-        grid-row: 1;
-        width: 120px;
-        height: 120px;
-        margin: 0 auto;
-    }
-    
-    #encuentranos{
-        grid-column: 1;
-        grid-row: 2;
-        margin: 0 auto;
-        margin-top: 2.5%;
-    }
-    
-    #informacion{
-        grid-column: 1;
-        grid-row: 4;
-    }
-    
-    #redes{
-        grid-column: 1;
-        grid-row: 3;
-        margin: 0 auto;
-        margin-top: 3.5%;
-    }
-    
-    #derechos{
-        grid-column: 1;
-        grid-row: 5;
-        margin-top: 1.2%;
-        font-size: 17px;
-    }
+  /*Asignar posiciones en la grilla*/
+  #content_img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
 
-    /*Responsivo: Titulos*/
-    .subtitulo_footer{
-        text-align: center;
-        margin-top: -5%;
-        font-size: 22px;
-    }
+  #encuentranos {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0 auto;
+    margin-top: 2.5%;
+  }
 
-    /*Responsivo: Details*/
-    .details_footer {
-        width: 80%;
-        margin-left: 10%;
-        margin-bottom: 0.5%;   
-        margin-top: 0.5%; 
-      }
+  #informacion {
+    grid-column: 1;
+    grid-row: 4;
+  }
 
+  #redes {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0 auto;
+    margin-top: 3.5%;
+  }
+
+  #derechos {
+    grid-column: 1;
+    grid-row: 5;
+    margin-top: 1.2%;
+    font-size: 17px;
+  }
+
+  /*Responsivo: Titulos*/
+  .subtitulo_footer {
+    text-align: center;
+    margin-top: -5%;
+    font-size: 22px;
+  }
+
+  /*Responsivo: Details*/
+  .details_footer {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+  }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 480px) {
+  #content_img {
+    width: 110px;
+    height: 110px;
+  }
 
-    #content_img{
-        width: 110px;
-        height: 110px;
-    }
-
-    #derechos{
-        font-size: 13px;
-    }
-
+  #derechos {
+    font-size: 13px;
+  }
 }
-  
- 
