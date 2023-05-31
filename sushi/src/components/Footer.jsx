@@ -18,8 +18,7 @@ const Footer = () => {
             <section id={StyleFooter.encuentranos}>
                 <h2 className={StyleFooter.subtitulo_footer}>Encuentranos</h2>
                 <p className={StyleFooter.encuentranos_footer}>10110 139 St Edmonton</p>
-                <p className={StyleFooter.encuentranos_footer}>+1 5873461285</p>
-                <p className={StyleFooter.encuentranos_footer}>info@zensushi.com</p>         
+                <p className={StyleFooter.encuentranos_footer}>20330 139 St Edmonton</p>       
             </section>
 
             <nav id={StyleFooter.redes}>
@@ -31,6 +30,7 @@ const Footer = () => {
             <section id={StyleFooter.informacion}>
                 <h2 className={StyleFooter.subtitulo_footer}>Información importante</h2>
                 <details className={StyleFooter.details_footer} onClick={(evento) => {
+                    evento.preventDefault();
                     open(1);
                 }} open={openIndex == 1}>
                     <summary className={StyleFooter.summary_footer}>Políticas de privacidad</summary>
@@ -38,10 +38,20 @@ const Footer = () => {
                 </details>
 
                 <details className={StyleFooter.details_footer} onClick={(evento) => {
+                    evento.preventDefault();
                     open(2);
                 }} open={openIndex == 2}>
                     <summary className={StyleFooter.summary_footer}>Preguntas más frecuentes</summary>
                     <p className={StyleFooter.text_details_footer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eligendi qui incidunt aspernatur praesentium dicta adipisci? Eius magnam ut ipsam, amet officiis explicabo ipsum sunt. Mollitia veritatis quis voluptate accusantium!</p>
+                </details>
+
+                <details className={StyleFooter.details_footer} onClick={(evento) => {
+                    evento.preventDefault();
+                    open(3);
+                }} open={openIndex == 3}>
+                    <summary className={StyleFooter.summary_footer}>Contactanos</summary>
+                    <p className={StyleFooter.text_details_footer}><i className="fa-solid fa-phone"></i> +1 5873461285</p>
+                    <p className={StyleFooter.text_details_footer}><i className="fa-solid fa-envelope"></i> info@zensushi.com</p>
                 </details>
 
             </section>

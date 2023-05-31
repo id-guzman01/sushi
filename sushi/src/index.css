@@ -2,9 +2,9 @@
 
 :root{
   --rojo: #800020;
-  --Negro: #000000;
-  --Blanco: #FFFFFF;
-  --Verde: #008000;
+  --negro: #000000;
+  --blanco: #FFFFFF;
+  --verde: #008000;
 }
 
 *{
@@ -12,6 +12,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 a{
