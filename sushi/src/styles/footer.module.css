@@ -64,11 +64,19 @@
   border-radius: 50%;
   background: black;
   text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .btn_social:hover {
   transition: 0.15s ease;
   background: var(--rojo);
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
 }
 
 /*Estilos de los details*/
@@ -80,6 +88,10 @@
   border: 1px solid #d8e0e9;
   position: relative;
   margin-top: 0.5%;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .summary_footer {
