@@ -10,6 +10,7 @@
   bottom: 0;
   position: relative;
   border-top: 1px solid var(--rojo);
+  overflow-x: hidden;
 }
 
 /*Asignar posiciones en la grilla*/
@@ -31,9 +32,9 @@
   margin: 2% 0 0 0;
 }
 
-#redes {
-  grid-area: encuentranos;
-  margin: 19% 0 0 23%;
+#redes{
+    grid-area: encuentranos;
+    margin: 17.5% 0 0 25%;
 }
 
 #derechos {
@@ -63,11 +64,19 @@
   border-radius: 50%;
   background: black;
   text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .btn_social:hover {
   transition: 0.15s ease;
   background: var(--rojo);
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
 }
 
 /*Estilos de los details*/
@@ -79,6 +88,10 @@
   border: 1px solid #d8e0e9;
   position: relative;
   margin-top: 0.5%;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .summary_footer {
@@ -126,7 +139,7 @@
 @media screen and (max-width: 670px) {
   #pie_pagina {
     grid-template-columns: 100%;
-    grid-template-rows: 100px 100px 50px 250px 50px;
+    grid-template-rows: 120px 80px 40px 300px 50px;
   }
 
   /*Asignar posiciones en la grilla*/
@@ -154,7 +167,6 @@
     grid-column: 1;
     grid-row: 3;
     margin: 0 auto;
-    margin-top: 3.5%;
   }
 
   #derechos {
