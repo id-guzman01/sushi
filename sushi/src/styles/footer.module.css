@@ -10,6 +10,7 @@
   bottom: 0;
   position: relative;
   border-top: 1px solid var(--rojo);
+  overflow-x: hidden;
 }
 
 /*Asignar posiciones en la grilla*/
@@ -31,15 +32,9 @@
   margin: 2% 0 0 0;
 }
 
-<<<<<<< HEAD
 #redes{
     grid-area: encuentranos;
     margin: 17.5% 0 0 25%;
-=======
-#redes {
-  grid-area: encuentranos;
-  margin: 19% 0 0 23%;
->>>>>>> 925128834f0ebd47a2c7be4ffaed3b4abd3d8955
 }
 
 #derechos {
@@ -132,7 +127,7 @@
 @media screen and (max-width: 670px) {
   #pie_pagina {
     grid-template-columns: 100%;
-    grid-template-rows: 100px 100px 50px 250px 50px;
+    grid-template-rows: 120px 80px 40px 300px 50px;
   }
 
   /*Asignar posiciones en la grilla*/
@@ -160,7 +155,6 @@
     grid-column: 1;
     grid-row: 3;
     margin: 0 auto;
-    margin-top: 3.5%;
   }
 
   #derechos {
