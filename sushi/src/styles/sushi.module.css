@@ -5,9 +5,9 @@
   flex-wrap: wrap;
   margin: 1rem;
   width: auto;
-  height: 100%;
+  height: auto;
   border-radius: 1rem;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.7);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.8);
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
@@ -104,8 +104,8 @@
 }
 
 #portada_section:hover img {
-  transform: translate(-50%, -50%) scale(1.3);
   filter: blur(5px);
+  transform: translate(-50%, -50%) scale(1.3);
   -webkit-transform: translate(-50%, -50%) scale(1.3);
   -moz-transform: translate(-50%, -50%) scale(1.3);
   -ms-transform: translate(-50%, -50%) scale(1.3);
@@ -115,33 +115,29 @@
 
 /*estilos para section tarjetas*/
 #card_section {
-  width: auto;
-  height: 100%;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem 0;
+  padding: 1rem;
+  place-items: center;
 }
-#card_section h2 {
-  position: absolute;
+#title_section {
+  margin-top: 2rem;
   font-size: 1.5rem;
-  margin: 1rem;
-  padding: 0.5rem;
   color: #000000;
   text-align: center;
-  z-index: 10000;
+  grid-column: 1/4;
+  grid-row: 1/2;
 }
-#card_section #card_sushi {
+#card_section .card_product {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 20vw;
-  height: 55vh;
-  margin-top: 4rem;
-  margin-left: 1rem;
+  width: 25vw;
+  height: 58vh;
   background: #232323;
   overflow: hidden;
   border-radius: 1rem;
@@ -150,23 +146,23 @@
   -moz-transition: all 0.5s ease-in;
   -ms-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
-#card_section #card_sushi:hover {
-  position: relative;
-  width: 20vw;
+#card_section .card_product:hover {
+  width: 25vw;
   height: 65vh;
+  cursor: pointer;
+  transition-delay: 0.1s;
 }
-
-#card_sushi::before {
+.card_product::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+
   width: 100%;
   height: 100%;
   background-color: #800020;
@@ -177,44 +173,43 @@
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
 }
-#card_sushi:hover::before {
+.card_product:hover::before {
   clip-path: circle(13rem at 80% -20%);
 }
-#card_section #card_sushi h2 {
+#card_section .card_product h3 {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   font-size: 1rem;
   color: #ffffff;
-  z-index: 1000;
+  z-index: 1;
 }
-
-#card_sushi picture {
+.card_product picture {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
   width: 35%;
   height: 30%;
-  transition: 1s;
+  z-index: 1;
+  transform: translateY(-60%);
+  transition: 0.1s;
+  -webkit-transform: translateY(-60%);
+  -moz-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  -o-transform: translateY(-60%);
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+
+.card_product:hover picture {
+  transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
 }
-
-#card_sushi:hover picture {
-  transform: translateY(-80%);
-  -webkit-transform: translateY(-80%);
-  -moz-transform: translateY(-80%);
-  -ms-transform: translateY(-80%);
-  -o-transform: translateY(-80%);
-}
-#card_sushi img {
+.card_product img {
   position: absolute;
   top: 60%;
   transform: translate(-50%, -50%) rotate(25deg);
@@ -226,81 +221,77 @@
   -moz-transform: translate(-50%, -50%) rotate(25deg);
   -ms-transform: translate(-50%, -50%) rotate(25deg);
   -o-transform: translate(-50%, -50%) rotate(25deg);
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
-#card_sushi:hover img {
-  top: 60%;
-  transform: translate(-50%, -50%) rotate(-35deg);
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
+.card_product:hover img {
+  width: 70%;
+  transform: translate(-45%, -90%) rotate(-45deg);
+  -webkit-transform: translate(-45%, -90%) rotate(-45deg);
+  -moz-transform: translate(-45%, -90%) rotate(-45deg);
+  -ms-transform: translate(-45%, -90%) rotate(-45deg);
+  -o-transform: translate(-45%, -90%) rotate(-45deg);
 }
-#card_sushi .content {
+.card_product .description {
+  position: relative;
+  top: -4%;
+  text-align: center;
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  color: #ffffff;
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+.card_product:hover .description {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(1%);
+  transition-delay: 0.3s;
+  -webkit-transform: translateX(1%);
+  -moz-transform: translateX(1%);
+  -ms-transform: translateX(1%);
+  -o-transform: translateX(1%);
+}
+.card_product .content {
   position: absolute;
   top: 58%;
   font-size: 1rem;
   color: #ffffff;
-  z-index: 1000;
+  z-index: 1;
   transition: 0.5s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
-#card_sushi .content:nth-child(4) {
+.card_product .content:nth-child(5) {
   font-size: 1.2rem;
   font-weight: 600;
   top: 65%;
 }
-#card_sushi:hover .content {
+.card_product:hover .content {
   transition-delay: 0.5s;
 }
-
-#card_sushi .description {
-  position: relative;
-  top: 25%;
-  text-align: center;
-  color: #ffffff;
-  visibility: hidden;
-  padding: 0.5rem;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: 0.3s ease-in-out;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-}
-#card_sushi:hover .description {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(-1%);
-  transition-delay: 0.3s;
-  -webkit-transform: translateX(-1%);
-  -moz-transform: translateX(-1%);
-  -ms-transform: translateX(-1%);
-  -o-transform: translateX(-1%);
-}
-
-#card_sushi #amount_section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
+.card_product .btn_amount_product {
+  position: absolute;
   width: 100%;
   height: auto;
-  margin-top: 45%;
-  padding: 1%;
-  gap: 1rem;
+  bottom: 15%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  color: #ffc107;
   visibility: hidden;
   opacity: 0;
   transform: translateX(-100%);
@@ -314,8 +305,7 @@
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
 }
-#card_sushi:hover #amount_section {
-  margin-top: 70%;
+.card_product:hover .btn_amount_product {
   visibility: visible;
   opacity: 1;
   transform: translate(1%);
@@ -325,85 +315,47 @@
   -o-transform: translate(1%);
   transition-delay: 0.3s;
 }
-#card_sushi #amount_section h3 {
+.btn_amount_product .amount_name {
   font-size: 1rem;
 }
-#card_sushi:hover #amount_section {
-  transform: translateX(1%);
-  -webkit-transform: translateX(1%);
-  -moz-transform: translateX(1%);
-  -ms-transform: translateX(1%);
-  -o-transform: translateX(1%);
-}
-#card_sushi #amount_section button {
+.btn_amount_product .btn_icon {
   background-color: transparent;
   border: none;
   padding: 1%;
+  color: #ffffff;
   cursor: pointer;
 }
-#card_sushi #amount_section button i {
-  background-color: transparent;
-  color: #fff;
+.btn_amount_product .span_amount {
+  font-size: 1rem;
+  font-weight: 600;
 }
-#card_sushi #add_button {
+.card_product #btn_add {
   position: absolute;
-  top: 85%;
   height: 10%;
   width: 70%;
-  bottom: -1rem;
+  bottom: 2rem;
   background-image: linear-gradient(180deg, #800020, #ffc107);
   color: #fff;
   font-weight: 600;
   border-radius: 1rem;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   -webkit-border-radius: ;
   -moz-border-radius: ;
   -ms-border-radius: ;
   -o-border-radius: ;
 }
-#card_sushi:hover #add_button {
-  position: relative;
-  top: 5%;
-  transition-delay: 0.1s;
+.card_product:hover #btn_add {
+  height: 8%;
+  margin-top: 10%;
+  transition-delay: 0.3s;
 }
-@media screen and (max-width: 1090px) {
-  #card_section {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
-    gap: 1rem;
-    width: 100%;
-    height: 100%;
-  }
-  #card_section h2 {
-    position: relative;
-    grid-column: 1/4;
-    grid-row: 1/2;
-    text-align: left;
-    padding: 0.5rem;
-    z-index: 1000;
-  }
-  #card_section #card_sushi {
-    width: 25vw;
-    height: 55vh;
-    margin-top: 1rem;
-    align-items: center;
-    justify-content: center;
-  }
-  #card_section #card_sushi:hover {
-    width: 25vw;
-    height: 70vh;
-  }
-  #card_section #add_button {
-    top: 80%;
-    height: 12%;
-  }
-}
-@media screen and (max-width: 720px) {
+
+@media screen and (max-width: 868px) {
   #card_section {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -412,33 +364,29 @@
     width: 100%;
     height: 100%;
   }
-  #card_section h2 {
+  #card_section #title_section {
     grid-column: 1/3;
     grid-row: 1/2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 20%;
+    margin: 0 auto;
     padding: 0.5rem;
-    z-index: 1000;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    z-index: 1;
   }
-  #card_section #card_sushi {
+  #card_section .card_product {
     width: 40vw;
     height: 55vh;
     align-items: center;
     justify-content: center;
   }
-  #card_section #card_sushi:hover {
+  #card_section .card_product:hover {
     width: 40vw;
     height: 70vh;
   }
-  #card_section #add_button {
-    top: 80%;
-    height: 12%;
+  .card_product .btn_amount_product {
+    bottom: 5rem;
+  }
+  #card_section #btn_add {
+    bottom: 2rem;
+    height: 8%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -459,38 +407,70 @@
     width: 90vw;
     height: 40vh;
   }
-}
-@media screen and (max-width: 420px) {
-  #card_section h2 {
+  #card_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    place-items: center;
+    margin-left: 1rem;
+  }
+  #title_section {
+    font-size: 1.2rem;
+    text-align: left;
     grid-column: 1/2;
     grid-row: 1/2;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 20%;
-    padding: 0.2rem;
-    font-size: 1.2rem;
-    z-index: 1000;
   }
-  #card_section #card_sushi {
-    position: relative;
-    width: 70vw;
-    height: 50vh;
+  #card_section .card_product {
+    grid-column: 1/2;
+    grid-row: auto;
+    width: 60vw;
+  }
+  #card_section:hover .card_product {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  #portada_section {
+    width: 90vw;
+    height: 40vh;
+    top: 1rem;
     margin: auto;
-    left: -1rem;
-    align-items: center;
-    justify-content: center;
   }
-  #card_section #card_sushi:hover {
-    width: 70vw;
-    height: 68vh;
+  #title_main {
+    position: absolute;
+    font-size: 1rem;
+    width: 80%;
+    margin: 1rem;
+    top: 45%;
   }
-  #card_sushi #add_button {
-    bottom: 20%;
+  #portada_section picture {
+    width: 90vw;
+    height: 40vh;
   }
-  #card_sushi:hover #add_button {
-    top: -5%;
-    height: 8%;
-    margin-top: 4%;
+  #card_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    place-items: center;
+    margin-left: 1rem;
+  }
+  #title_section {
+    font-size: 1.2rem;
+    text-align: left;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #card_section .card_product {
+    grid-column: 1/2;
+    grid-row: auto;
+    width: 80vw;
+    height: 50vh;
+  }
+  #card_section:hover .card_product {
+    width: 80vw;
+    height: 58vh;
+  }
+  .card_product:hover::before {
+    clip-path: circle(13rem at 80% -10%);
   }
 }
