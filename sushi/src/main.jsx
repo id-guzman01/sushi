@@ -12,6 +12,10 @@ import Catalogo_sushi from "./components/Catalogo.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RegistroPrvider></RegistroPrvider>
+    <RegistroPrvider>
+      <Products />
+      <Catalogo_sushi />
+      <Footer />
+    </RegistroPrvider>
   </React.StrictMode>
 );

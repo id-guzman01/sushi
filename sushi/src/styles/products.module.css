@@ -35,10 +35,8 @@
   font-size: 1.2rem;
   text-align: center;
   color: #000000;
-  margin: -0.5rem 1rem;
-  padding: 1rem 6rem;
-  flex-grow: 1;
-  flex-shrink: 1;
+  margin: 1rem;
+  padding: 1rem;
 }
 #products_section {
   position: relative;
