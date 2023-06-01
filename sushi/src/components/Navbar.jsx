@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <a href="#" className={StyleNav.Nav_Enlace}> logout </a>
       </article>
-      <input type="checkbox" name="" id={StyleNav.check} checked />
+      <input type="checkbox" className={StyleNav.Nav_input} name="" id={StyleNav.check} checked />
       <article className={`${StyleNav.container} ${isMenuOpen ? StyleNav.open : ''}`}>
         <section className={StyleNav.menu}>Zen Sushi</section>
         <ol>

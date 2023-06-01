@@ -64,7 +64,7 @@ ol li:hover a{
     color: #00ff15;
     letter-spacing: 3px;
 }
-input{
+.Nav_input{
     appearance: none;
     -webkit-appearance: none;
     visibility: hidden;
