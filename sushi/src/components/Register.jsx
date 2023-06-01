@@ -10,11 +10,6 @@ const Register = () => {
         evento.preventDefault();
         const {name, email, password} = evento.target.elements;
         registrarse(name.value, email.value, password.value);
-        if(resultado=='El correo ya existe'){
-            alert('El correo ya existe');
-        }else if(resultado=='usuario registrado con exito'){
-            alert('usuario registrado con exito');
-        }
     }
 
    return(<>
