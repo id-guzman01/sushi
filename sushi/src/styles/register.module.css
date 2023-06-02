@@ -137,10 +137,11 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
     
     #ventana{
-        margin-top: 8%;
+        margin-top: 1%;
+        height: 610px;
     }    
 
 }
