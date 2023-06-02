@@ -14,6 +14,13 @@ import UserProvider from "./provider/UserProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+<<<<<<< HEAD
 
   </React.StrictMode>
 );
+=======
+    <RegistroPrvider>
+    </RegistroPrvider>
+  </React.StrictMode>,
+)
+>>>>>>> 1fda40c1f10254991f54aa9580c09f7dcc9bb9bb
