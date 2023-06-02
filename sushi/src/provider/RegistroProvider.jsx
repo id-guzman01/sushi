@@ -2,9 +2,6 @@ import { useState } from "react";
 import RegistroContext from "../context/RegistroContext";
 
 const RegistroProvider = ({ children }) => {
-  let [resultado, setResultado] = useState(null);
-  let [registro, setRegistro] = useState(null);
-
   const registrarse = (name, email, password) => {
     fetch("https://646d81b19c677e23218a0f68.mockapi.io/users")
       .then((respuesta) => respuesta.json())
@@ -28,13 +25,6 @@ const RegistroProvider = ({ children }) => {
             .then((data) => {
               alert("usuario registrado con exito");
             })
-<<<<<<< HEAD
-            .catch((error) => console.error(error));
-        }
-      })
-      .catch((error) => console.error(error));
-  };
-=======
               .then((respuesta) => respuesta.json())
               .then((data) => {
                 alert('¡Te registraste con éxito! Ya puedes loguearte en nuestro sistema.');
@@ -44,10 +34,9 @@ const RegistroProvider = ({ children }) => {
         })
         .catch((error) => console.error(error));
     }
->>>>>>> 9e36333d602d7b615d46ce4cb0370189584406c3
 
   return (
-    <RegistroContext.Provider value={{ registrarse, resultado }}>
+    <RegistroContext.Provider value={{ registrarse }}>
       {children}
     </RegistroContext.Provider>
   );
