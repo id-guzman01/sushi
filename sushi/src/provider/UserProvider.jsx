@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import UserContext from "../context/UserContext.jsx";
 
-
 const UserProvider = ({ children }) => {
   const usuarios = [
     { name: "Eduardo", email: "correo@gmail.com", password: "password" },
@@ -10,15 +9,13 @@ const UserProvider = ({ children }) => {
   const [userError, setUserError] = useState(null);
   const [userSuccess, setUserSuccess] = useState(null);
 
-
   let [userLog, setUserLog] = useState(null);
-   const addUser = (correo ) => {
-    setUserLog(userLog = correo);
-   }
-   const logOut = () => {
-    setUserLog(null)
-   }
-
+  const addUser = (correo) => {
+    setUserLog((userLog = correo));
+  };
+  const logOut = () => {
+    setUserLog(null);
+  };
 
   const login = (email, password) => {
     fetch("https://646d81b19c677e23218a0f68.mockapi.io/users")
@@ -42,12 +39,19 @@ const UserProvider = ({ children }) => {
   };
   return (
     <UserContext.Provider
-      value={{ user, userError, login, usuarios, userSuccess, addUser, logOut, userLog }}
+      value={{
+        user,
+        userError,
+        login,
+        usuarios,
+        userSuccess,
+        addUser,
+        logOut,
+        userLog,
+      }}
     >
       {children}
     </UserContext.Provider>
   );
 };
-
 export default UserProvider;
-  
