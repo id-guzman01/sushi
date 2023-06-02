@@ -1,3 +1,4 @@
+import sushi_portada from "../assets/sushi_portada.png";
 import principal from "../assets/sushi.jpg";
 import bebidas from "../assets/bebidas.jpg";
 import postres from "../assets/postres.jpg";
@@ -24,15 +25,23 @@ const Products = () => {
           tu pedido de forma rápida y sencilla.
         </p>
       </section>
+      <section id={StyleProducts.portada_section}>
+        <h1 id={StyleProducts.title_main}>
+          Sumérgete en el mundo del sushi: ¡Una explosión de sabores te espera!
+        </h1>
+        <picture>
+          <img src={sushi_portada} alt="Imagen de portada" />
+        </picture>
+      </section>
       <section id={StyleProducts.products_section}>
         <h2 id={StyleProducts.title_products}>Productos:</h2>
         <article
           className={StyleProducts.card_products}
-          onClick={(event) => {
+          onClick={() => {
             setCategoria("sushi");
           }}
         >
-          <h2 className={StyleProducts.title_card}>Plato Principal</h2>
+          <h2 className={StyleProducts.title_card}>Sushi</h2>
           <picture>
             <img src={principal} alt="Plato Principal" />
             <p>¡No esperes más, el placer gastronómico está a solo un clic!</p>

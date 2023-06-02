@@ -1,119 +1,3 @@
-/*estilos para section principal*/
-#portada_section {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.8);
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-#title_main {
-  font-size: 1.6rem;
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  bottom: 20%;
-  z-index: 1;
-  transform: translate(-50%, 100%);
-  color: #ffffff;
-  opacity: 0;
-  transition: transform 0.8s, opacity 0.8s;
-  -webkit-transition: transform 0.8s, opacity 0.8s;
-  -moz-transition: transform 0.8s, opacity 0.8s;
-  -ms-transition: transform 0.8s, opacity 0.8s;
-  -o-transition: transform 0.8s, opacity 0.8s;
-  -webkit-transform: translate(-50%, 100%);
-  -moz-transform: translate(-50%, 100%);
-  -ms-transform: translate(-50%, 100%);
-  -o-transform: translate(-50%, 100%);
-}
-#portada_section:hover #title_main {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-
-#portada_section picture {
-  position: relative;
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
-  margin: auto;
-  cursor: pointer;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-#portada_section picture:after {
-  content: "";
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-140%, 50%);
-  background-color: rgba(136, 14, 79, 0.3);
-  border-radius: 50%;
-  transition: all 0.8s ease;
-  -webkit-transform: translate(-140%, 50%);
-  -moz-transform: translate(-140%, 50%);
-  -ms-transform: translate(-140%, 50%);
-  -o-transform: translate(-140%, 50%);
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
-}
-#portada_section:hover picture:after {
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-#portada_section img {
-  position: absolute;
-  height: 150%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 1s ease;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-}
-
-#portada_section:hover img {
-  filter: blur(5px);
-  transform: translate(-50%, -50%) scale(1.3);
-  -webkit-transform: translate(-50%, -50%) scale(1.3);
-  -moz-transform: translate(-50%, -50%) scale(1.3);
-  -ms-transform: translate(-50%, -50%) scale(1.3);
-  -o-transform: translate(-50%, -50%) scale(1.3);
-  -webkit-filter: blur(5px);
-}
-
 /*estilos para section tarjetas*/
 #card_section {
   height: 100%;
@@ -189,7 +73,7 @@
   position: absolute;
   top: 30%;
   left: 50%;
-  width: 25%;
+  width: 40%;
   height: 30%;
   z-index: 1;
   transform: translateY(-60%);
@@ -218,24 +102,24 @@
   height: auto;
   object-fit: cover;
   background: none;
-  transform: translate(-50%, -50%) rotate(25deg);
+  transform: translate(-50%, -50%);
   transition: all 0.5s ease-in-out;
-  -webkit-transform: translate(-50%, -50%) rotate(25deg);
-  -moz-transform: translate(-50%, -50%) rotate(25deg);
-  -ms-transform: translate(-50%, -50%) rotate(25deg);
-  -o-transform: translate(-50%, -50%) rotate(25deg);
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .card_product:hover img {
   width: 70%;
-  transform: translate(-45%, -90%) rotate(-45deg);
-  -webkit-transform: translate(-45%, -90%) rotate(-45deg);
-  -moz-transform: translate(-45%, -90%) rotate(-45deg);
-  -ms-transform: translate(-45%, -90%) rotate(-45deg);
-  -o-transform: translate(-45%, -90%) rotate(-45deg);
+  transform: translate(-45%, -90%) rotate(45deg);
+  -webkit-transform: translate(-45%, -90%) rotate(45deg);
+  -moz-transform: translate(-45%, -90%) rotate(45deg);
+  -ms-transform: translate(-45%, -90%) rotate(45deg);
+  -o-transform: translate(-45%, -90%) rotate(45deg);
 }
 .card_product .description {
   position: relative;
@@ -251,20 +135,20 @@
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
 }
 .card_product:hover .description {
   visibility: visible;
   opacity: 1;
   transform: translateX(1%);
   transition-delay: 0.3s;
-  -webkit-transform: translateX(1%);
-  -moz-transform: translateX(1%);
-  -ms-transform: translateX(1%);
-  -o-transform: translateX(1%);
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
 }
 .card_product .content {
   position: absolute;
@@ -303,31 +187,37 @@
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
 }
 .card_product:hover .btn_amount_product {
   visibility: visible;
   opacity: 1;
   transform: translate(1%);
-  -webkit-transform: translate(1%);
-  -moz-transform: translate(1%);
-  -ms-transform: translate(1%);
-  -o-transform: translate(1%);
+  -webkit-transform: ;
+  -moz-transform: ;
+  -ms-transform: ;
+  -o-transform: ;
   transition-delay: 0.3s;
 }
 .btn_amount_product .amount_name {
   font-size: 1rem;
 }
 .btn_amount_product .btn_icon {
-  background-color: transparent;
+  background-color: #800020;
   border: none;
+  border-radius: 30%;
   padding: 1%;
   color: #ffffff;
   cursor: pointer;
+  -webkit-border-radius: 30%;
+  -moz-border-radius: 30%;
+  -ms-border-radius: 30%;
+  -o-border-radius: 30%;
 }
+
 .btn_amount_product .span_amount {
   font-size: 1rem;
   font-weight: 600;
@@ -336,6 +226,7 @@
   position: absolute;
   height: 10%;
   width: 70%;
+  left: 15%;
   bottom: 2rem;
   background-image: linear-gradient(180deg, #800020, #ffc107);
   color: #fff;
@@ -393,23 +284,6 @@
   }
 }
 @media screen and (max-width: 480px) {
-  #portada_section {
-    width: 90vw;
-    height: 40vh;
-    top: 1rem;
-    margin: auto;
-  }
-  #title_main {
-    position: absolute;
-    font-size: 1rem;
-    width: 80%;
-    margin: 1rem;
-    top: 45%;
-  }
-  #portada_section picture {
-    width: 90vw;
-    height: 40vh;
-  }
   #card_section {
     display: grid;
     grid-template-columns: 1fr;
@@ -435,23 +309,6 @@
   }
 }
 @media screen and (max-width: 420px) {
-  #portada_section {
-    width: 90%;
-    height: auto;
-    top: 1rem;
-    margin: auto;
-  }
-  #title_main {
-    position: absolute;
-    font-size: 1rem;
-    width: 80%;
-    margin: 1rem;
-    top: 45%;
-  }
-  #portada_section picture {
-    width: 90vw;
-    height: 40vh;
-  }
   #card_section {
     display: grid;
     grid-template-columns: 1fr;
