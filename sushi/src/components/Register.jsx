@@ -90,7 +90,8 @@ const Register = () => {
                 </button>
                 <button
                   id={Style.btn_cancel_form_register}
-                  onClick={() => {
+                  onClick={(evento) => {
+                    evento.preventDefault();
                     setAuth(null);
                   }}
                 >

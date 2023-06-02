@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import UserContext from "../context/UserContext.jsx";
+import AuthContext from "../context/AuthContext";
+import { useContext } from "react";
 
 const UserProvider = ({ children }) => {
+  const { setAuth } = useContext(AuthContext);
+
   const usuarios = [
     { name: "Eduardo", email: "correo@gmail.com", password: "password" },
   ];
@@ -29,6 +33,7 @@ const UserProvider = ({ children }) => {
         } else {
           alert("Bienvenido");
           addUser(email);
+          setAuth(null);
         }
       })
       .catch((error) => {
