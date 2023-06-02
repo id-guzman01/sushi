@@ -97,7 +97,7 @@
 }
 .card_product img {
   position: absolute;
-  top: 60%;
+  top: 70%;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -114,12 +114,12 @@
   -o-transform: translate(-50%, -50%);
 }
 .card_product:hover img {
-  width: 70%;
-  transform: translate(-45%, -90%) rotate(45deg);
-  -webkit-transform: translate(-45%, -90%) rotate(45deg);
-  -moz-transform: translate(-45%, -90%) rotate(45deg);
-  -ms-transform: translate(-45%, -90%) rotate(45deg);
-  -o-transform: translate(-45%, -90%) rotate(45deg);
+  width: 80%;
+  transform: translate(-45%, -100%) rotate(45deg);
+  -webkit-transform: translate(-45%, -100%) rotate(45deg);
+  -moz-transform: translate(-45%, -100%) rotate(45deg);
+  -ms-transform: translate(-45%, -100%) rotate(45deg);
+  -o-transform: translate(-45%, -100%) rotate(45deg);
 }
 .card_product .description {
   position: relative;
@@ -135,10 +135,10 @@
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
 }
 .card_product:hover .description {
   visibility: visible;
@@ -187,19 +187,11 @@
   -moz-transition: 0.3s ease-in-out;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
 }
 .card_product:hover .btn_amount_product {
   visibility: visible;
   opacity: 1;
   transform: translate(1%);
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
   transition-delay: 0.3s;
 }
 .btn_amount_product .amount_name {

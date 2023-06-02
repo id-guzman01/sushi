@@ -117,20 +117,26 @@ const Cart = () => {
               <i className="fa-solid fa-trash"></i>
             </button>
             {!userLog ? (
-              <button id={StyleCart.btn_realizar_cart} onClick={(evento) => {
-                evento.preventDefault();
-                setAuth("login");
-              }}>
-                Iniciar Sesion</button>
+              <button
+                id={StyleCart.btn_realizar_cart}
+                onClick={(evento) => {
+                  evento.preventDefault();
+                  setAuth("login");
+                }}
+              >
+                Iniciar Sesion
+              </button>
             ) : (
-
-                <button id={StyleCart.btn_realizar_cart} onClick={(evento) => {
-                    alert('La siguiente parte completará en proximas versiones...');
-                  }}
-                >
+              <button
+                id={StyleCart.btn_realizar_cart}
+                onClick={() => {
+                  alert(
+                    "La siguiente parte se completará en proximas versiones..."
+                  );
+                }}
+              >
                 Realizar Pedido <i className="fa-solid fa-arrow-right"></i>
-                </button>
-
+              </button>
             )}
           </section>
         </section>

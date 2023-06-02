@@ -25,14 +25,7 @@ const Products = () => {
           tu pedido de forma rápida y sencilla.
         </p>
       </section>
-      <section id={StyleProducts.portada_section}>
-        <h1 id={StyleProducts.title_main}>
-          Sumérgete en el mundo del sushi: ¡Una explosión de sabores te espera!
-        </h1>
-        <picture>
-          <img src={sushi_portada} alt="Imagen de portada" />
-        </picture>
-      </section>
+
       <section id={StyleProducts.products_section}>
         <h2 id={StyleProducts.title_products}>Productos:</h2>
         <article

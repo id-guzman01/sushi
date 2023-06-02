@@ -43,14 +43,6 @@ const Sushi = () => {
   }
   return (
     <>
-      <section id={StyleSushi.portada_section}>
-        <h1 id={StyleSushi.title_main}>
-          Sumérgete en el mundo del sushi: ¡Una explosión de sabores te espera!
-        </h1>
-        <picture>
-          <img src={sushi_portada} alt="Imagen de portada" />
-        </picture>
-      </section>
       <section id={StyleSushi.card_section}>
         <h2 id={StyleSushi.title_section}>
           Contamos con la siguiente variedad de sushi:

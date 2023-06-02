@@ -253,7 +253,7 @@
     width: 65%;
     height: 100%;
   }
-}  
+}
 
 @media screen and (max-width: 720px) {
   #cart {
@@ -327,13 +327,13 @@
   .name_product_cart {
     font-size: 14.8px;
     margin-top: 12px;
-    margin-left: 18px;
+    margin-left: 12px;
   }
 
   .precio_product {
     font-size: 14px;
     margin-top: 3.5px;
-    margin-left: 22%;
+    margin-left: 26%;
   }
 
   .btn_product_cart {
