@@ -11,7 +11,7 @@
   color: white;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 #btn_open_cart:hover {
@@ -29,20 +29,31 @@
   background-color: #f2f2f2;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
   transform: translateX(100%);
   animation: slideIn 2s forwards;
-
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -webkit-animation: slideIn 2s forwards;
 }
 
 @keyframes slideIn {
   0% {
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }
 
