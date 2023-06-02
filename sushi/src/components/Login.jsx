@@ -62,7 +62,8 @@ const Login = ({ children }) => {
                 </button>
                 <button
                   id={Style.btn_cancel_form_login}
-                  onClick={() => {
+                  onClick={(evento) => {
+                    evento.preventDefault();
                     setAuth(null);
                   }}
                 >

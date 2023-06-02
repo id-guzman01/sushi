@@ -3,11 +3,13 @@ import StyleNav from "../styles/navbar.module.css";
 import Logo from "../assets/logo_zen_sushi.png";
 import UserContext from "../context/UserContext";
 import AuthContext from "../context/AuthContext";
+import CategoriaContext from "../context/CategoriaContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { userLog, logOut } = useContext(UserContext);
   const [menuLogin, setMenuLogin] = useState(false);
+  const { setCategoria } = useContext(CategoriaContext);
 
   const closedLogin = (event) => {
     event.preventDefault();
@@ -25,24 +27,29 @@ const Navbar = () => {
           <img className={StyleNav.Logo} src={Logo} alt="Logo_ZenSushi" />
         </picture>
         <nav className={StyleNav.opciones}>
-          <a href="#" className={StyleNav.Nav_Enlace} onClick={handleMenuClick}>
-            {" "}
-            Menu{" "}
+          <a href="#" className={StyleNav.Nav_Enlace} onClick={(evento) => {
+            evento.preventDefault();
+            handleMenuClick();
+            }}>
+            Menu
           </a>
-          <a href="#" className={StyleNav.Nav_Enlace}>
-            {" "}
-            Inicio{" "}
+          <a href="#" className={StyleNav.Nav_Enlace} onClick={(event) => {
+            event.preventDefault();
+            setCategoria("menu");
+          }}>
+            Inicio
           </a>
           {!userLog && (
             <a
               href="#"
               className={StyleNav.Nav_Enlace}
-              onClick={() => {
+              onClick={(evento) => {
+                evento.preventDefault();
                 setAuth("register");
               }}
             >
-              {" "}
-              Registro{" "}
+              
+              Registro
             </a>
           )}
           {!userLog && (
@@ -53,14 +60,17 @@ const Navbar = () => {
                 setAuth("login");
               }}
             >
-              {" "}
-              Login{" "}
+              
+              Login
             </a>
           )}
           {userLog && (
-            <a href="#" className={StyleNav.Nav_Enlace} onClick={closedLogin}>
-              {" "}
-              logout{" "}
+            <a href="#" className={StyleNav.Nav_Enlace} onClick={(evento) => {
+              evento.preventDefault();
+              closedLogin();
+            }}>
+              
+              logout
             </a>
           )}
         </nav>
@@ -78,17 +88,23 @@ const Navbar = () => {
       >
         <h1 className={StyleNav.h1nav}>Zen Sushi</h1>
         <nav className={StyleNav.menu}>
-          <a href="#" className={StyleNav.continerA}>
-            {" "}
-            Platos principales{" "}
+          <a href="#" className={StyleNav.continerA} onClick={(event) => {
+            event.preventDefault();
+            setCategoria("sushi");
+          }}>
+            Sushi
           </a>
-          <a href="#" className={StyleNav.continerA}>
-            {" "}
-            Bebidas{" "}
+          <a href="#" className={StyleNav.continerA} onClick={(event) => {
+            event.preventDefault();
+            setCategoria("bebidas");
+          }}>
+            Bebidas
           </a>
-          <a href="#" className={StyleNav.continerA}>
-            {" "}
-            Postres{" "}
+          <a href="#" className={StyleNav.continerA} onClick={(event) => {
+            event.preventDefault();
+            setCategoria("postres");
+          }}>
+            Postres
           </a>
         </nav>
       </section>

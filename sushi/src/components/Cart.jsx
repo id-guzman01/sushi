@@ -2,12 +2,14 @@ import StyleCart from "../styles/cart.module.css";
 import { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import UserContext from "../context/UserContext";
+import AuthContext from "../context/AuthContext";
 
 const Cart = () => {
   const [mostrar, setMostrar] = useState(false);
   const { listCart, subTotal, reset, remove, plusCount, minusCount } =
     useContext(CartContext);
   const { userLog } = useContext(UserContext);
+  const { setAuth } = useContext(AuthContext);
 
   const showCart = () => {
     setMostrar(!mostrar);
@@ -115,11 +117,20 @@ const Cart = () => {
               <i className="fa-solid fa-trash"></i>
             </button>
             {!userLog ? (
-              <button id={StyleCart.btn_realizar_cart}>Iniciar Sesion</button>
+              <button id={StyleCart.btn_realizar_cart} onClick={(evento) => {
+                evento.preventDefault();
+                setAuth("login");
+              }}>
+                Iniciar Sesion</button>
             ) : (
-              <button id={StyleCart.btn_realizar_cart}>
+
+                <button id={StyleCart.btn_realizar_cart} onClick={(evento) => {
+                    alert('La siguiente parte completará en proximas versiones...');
+                  }}
+                >
                 Realizar Pedido <i className="fa-solid fa-arrow-right"></i>
-              </button>
+                </button>
+
             )}
           </section>
         </section>

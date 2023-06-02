@@ -1,7 +1,13 @@
 import { useState } from "react";
 import RegistroContext from "../context/RegistroContext";
+import AuthContext from "../context/AuthContext";
+import { useContext } from "react";
+import UserContext from "../context/UserContext";
 
 const RegistroProvider = ({ children }) => {
+  const { setAuth } = useContext(AuthContext);
+  const { addUser } = useContext(UserContext);
+
   const registrarse = (name, email, password) => {
     fetch("https://646d81b19c677e23218a0f68.mockapi.io/users")
       .then((respuesta) => respuesta.json())
@@ -23,13 +29,11 @@ const RegistroProvider = ({ children }) => {
           })
             .then((respuesta) => respuesta.json())
             .then((data) => {
-              alert("usuario registrado con exito");
+              alert('¡Te registraste con éxito! Ya puedes loguearte en nuestro sistema.');
+              setAuth(null);
+              addUser(email);
             })
-              .then((respuesta) => respuesta.json())
-              .then((data) => {
-                alert('¡Te registraste con éxito! Ya puedes loguearte en nuestro sistema.');
-              })
-              .catch((error) => console.error(error));
+            .catch((error) => console.error(error));
           }
         })
         .catch((error) => console.error(error));
