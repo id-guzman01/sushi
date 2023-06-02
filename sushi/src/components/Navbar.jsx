@@ -1,11 +1,20 @@
-import React, {useState} from 'react';
+import {useState, useContext} from 'react';
 import StyleNav from '../styles/navbar.module.css';
 import Logo from '../assets/logo_zen_sushi.png';
+import UserContext from '../context/UserContext';
+import Login from './Login.jsx';
+import Style from '../styles/login.module.css'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {userLog, logOut } = useContext(UserContext);
+  const[menuLogin, setMenuLogin] = useState(false);
 
-
+  const closedLogin = (event) => {
+  event.preventDefault();
+  logOut();
+    
+  }
 
   let handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,42 +22,31 @@ const Navbar = () => {
 
   return (
     <header>
-<article className={StyleNav.opciones}>
-        <img className={StyleNav.Logo} src={Logo} />
-        <a href="#" className={StyleNav.Nav_Enlace} onClick={handleMenuClick}>
-          Menu
-        </a>
-        <a href="#" className={StyleNav.Nav_Enlace}>
-          Inicio
-        </a>
-        <a href="#" className={StyleNav.Nav_Enlace}> Login </a>
-        <a href="#" className={StyleNav.Nav_Enlace}> Registro </a>
+    <section className={StyleNav.header}>
+      <picture>
+        <img className={StyleNav.Logo} src={Logo} alt='Logo_ZenSushi'/>
+      </picture>
+      <nav className={StyleNav.opciones}>
 
-        <a href="#" className={StyleNav.Nav_Enlace}> logout </a>
-      </article>
+        <a href="#" className={StyleNav.Nav_Enlace} onClick={handleMenuClick}> Menu </a>
+        <a href="#" className={StyleNav.Nav_Enlace}> Inicio </a>
+        {!userLog && <a href="#" className={StyleNav.Nav_Enlace}> Registro </a> }
+        {!userLog &&  <a href="#" className={StyleNav.Nav_Enlace} onClick={()=>[]}> Login </a> }
+        {userLog &&<a href="#" className={StyleNav.Nav_Enlace} onClick={closedLogin}> logout </a>}
+      </nav>
+    </section>
       <input type="checkbox" className={StyleNav.Nav_input} name="" id={StyleNav.check} checked />
-      <article className={`${StyleNav.container} ${isMenuOpen ? StyleNav.open : ''}`}>
-        <section className={StyleNav.menu}>Zen Sushi</section>
-        <ol>
-          <li>
-            <a href="#">
-              <i className="">Platos principales</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="">Bebidas</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="">Postres</i>
-            </a>
-          </li>
-        </ol>
-      </article>
-        
+  
+        <section className={`${StyleNav.container} ${isMenuOpen ? StyleNav.open : ''}`}>
+        <h1 className={StyleNav.h1nav}>Zen Sushi</h1>
+        <nav className={StyleNav.menu}>
+            <a href="#" className={StyleNav.continerA}> Platos principales </a>
+            <a href="#" className={StyleNav.continerA}> Bebidas </a>
+            <a href="#" className={StyleNav.continerA}> Postres </a>
+   
+      </nav>
+      </section>    
     </header>
   );
 };
-export default Navbar
+export default Navbar;
