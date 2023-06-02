@@ -41,7 +41,7 @@ const Register = () => {
                     </fieldset>
                     <fieldset id={Style.row_button_form_register}>
                         <button id={Style.btn_accept_form_register} type='submit'>Registrate</button>
-
+                        <button id={Style.btn_cancel_form_register}>Cerrar</button>
                     </fieldset>
                 </form>
             </article>

@@ -22,7 +22,7 @@ const RegistroProvider = ({children}) => {
             })
               .then((respuesta) => respuesta.json())
               .then((data) => {
-                alert('usuario registrado con exito');
+                alert('¡Te registraste con éxito! Ya puedes loguearte en nuestro sistema.');
               })
               .catch((error) => console.error(error));
           }

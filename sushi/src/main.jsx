@@ -11,7 +11,5 @@ import RegistroPrvider from './provider/RegistroProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RegistroPrvider>
-    </RegistroPrvider>
   </React.StrictMode>,
 )
