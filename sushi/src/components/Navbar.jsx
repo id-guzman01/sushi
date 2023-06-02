@@ -2,10 +2,7 @@ import { useState, useContext } from "react";
 import StyleNav from "../styles/navbar.module.css";
 import Logo from "../assets/logo_zen_sushi.png";
 import UserContext from "../context/UserContext";
-import Login from "./Login.jsx";
-import Style from "../styles/login.module.css";
 import AuthContext from "../context/AuthContext";
-import Register from "./Register";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
