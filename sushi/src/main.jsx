@@ -15,19 +15,28 @@ import SushiProvider from "./provider/SushiProvider.jsx";
 import CategoriaProvider from "./provider/CategoriaProvider.jsx";
 import BebidasProvider from "./provider/BebidasProvider.jsx";
 import PostresProvider from "./provider/PostresProvider.jsx";
+import AuthProvider from "./provider/AuthProvider.jsx";
+import UserProvider from "./provider/UserProvider.jsx";
+import CartProvider from "./provider/CartProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <SushiProvider>
-      <RegistroPrvider>
-        <CategoriaProvider>
-          <BebidasProvider>
-            <PostresProvider>
-                <App />
-            </PostresProvider>
-          </BebidasProvider>
-        </CategoriaProvider>
-      </RegistroPrvider>
-    </SushiProvider>
-  </React.StrictMode>,
-)
+    <AuthProvider>
+      <UserProvider>
+        <RegistroPrvider>
+          <CategoriaProvider>
+            <SushiProvider>
+              <BebidasProvider>
+                <PostresProvider>
+                  <CartProvider>
+                    <App />
+                  </CartProvider>
+                </PostresProvider>
+              </BebidasProvider>
+            </SushiProvider>
+          </CategoriaProvider>
+        </RegistroPrvider>
+      </UserProvider>
+    </AuthProvider>
+  </React.StrictMode>
+);

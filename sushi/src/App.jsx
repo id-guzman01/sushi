@@ -9,19 +9,20 @@ import Bebidas from "./components/Bebidas.jsx";
 import Postres from "./components/Postres.jsx";
 import Login from "./components/Login";
 
-
 const App = () => {
-  return <>
-        <Navbar />
-        <Login />
-        <Register />
-        <Products />
-        <Cart />
-        <Sushi />
-        <Bebidas />
-        <Postres />
-        <Footer />
-  </>;
+  return (
+    <>
+      <Navbar />
+      <Login />
+      <Register />
+      <Products />
+      <Cart />
+      <Sushi />
+      <Bebidas />
+      <Postres />
+      <Footer />
+    </>
+  );
 };
 
 export default App;
