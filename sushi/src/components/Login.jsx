@@ -2,6 +2,7 @@ import Style from "../styles/login.module.css";
 import image_sushi from "../assets/sushi_register.jpg";
 import UserContext from "../context/UserContext";
 import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
 
 const Login = ({ children }) => {
   const { user, userError, login, usuarios, userSuccess, userLog, logOut } =
@@ -13,6 +14,11 @@ const Login = ({ children }) => {
     console.log(email.value, password.value);
     login(email.value, password.value);
   };
+
+  const { auth, setAuth } = useContext(AuthContext);
+  if (!auth || auth != "login") {
+    return null;
+  }
 
   return (
     <>
@@ -53,6 +59,14 @@ const Login = ({ children }) => {
               <fieldset id={Style.row_button_form_login}>
                 <button id={Style.btn_accept_form_login} type="submit">
                   Iniciar Sesion
+                </button>
+                <button
+                  id={Style.btn_cancel_form_login}
+                  onClick={() => {
+                    setAuth(null);
+                  }}
+                >
+                  Cerrar
                 </button>
                 {children}
               </fieldset>
