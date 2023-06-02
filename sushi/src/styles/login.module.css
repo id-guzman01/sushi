@@ -11,7 +11,7 @@
 
 #ventana{
     width: 390px;
-    height: 630px;
+    height: 500px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
@@ -19,21 +19,21 @@
     margin-top: 5%;
 }
 
-#picture_register{
+#picture_login{
     display: block;
     width: 100%;
     height: 200px;
     
 }
 
-#picture_register img{
+#picture_login img{
     object-fit: cover;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 /*Titulos*/
-#title_register{
+#title_login{
     font-size: 30px;
     text-align: center;
     margin-top: 2%;
@@ -41,36 +41,36 @@
 }
 
 /*Articulo Registro*/
-#article_register{
+#formarticle_login{
     width: 90%;
     margin-left: 5%;
     border-top: 1px solid var(--rojo);
 }
 
-#title_article_register{
+#title_formarticle_login{
     font-size: 25px;
     margin-top: 3%;
     text-align: center;
     margin-bottom: 5px;
 }
 
-#text_article_register{
+#text_formarticle_login{
     font-size: 17px;
     text-align: center;
     margin-bottom: 3%;
 }
 
-.row_form_register{
+.row_form_login{
     width: 80%;
     margin-left: 10%;
     margin-bottom: 2.5%;
 }
 
-.label_form_register{
+.label_form_login{
     font-size: 15px;
 }
 
-.text_form_register{
+.text_form_login{
     border: 1px solid black;
     width: 90%;
     height: 30px;
@@ -79,34 +79,34 @@
     padding-left: 3%;
 }
 
-.text_form_register:hover{
+.text_form_login:hover{
     border: 1px solid red;
     transition: border 0.2s ease-in-out;
 }
 
-#input_terminos_form_register{
+#input_terminos_form_login{
     cursor: pointer;
     width: 15px;
     height: 15px;
     margin-right: 2.3%;
 }
 
-#input_terminos_form_register:hover{
+#input_terminos_form_login:hover{
     border: 1px solid black;
     transition: border 0.2s ease-in-out;
 }
 
 /*Sección de botones del formulario*/
 
-#row_button_form_register{
+#row_button_form_login{
     width: 80%;
     margin-left: 7%;
-    margin-bottom: 2.5%;
+    margin-top: 7%;
     display: flex;
     justify-content: space-around;
 }
 
-#btn_accept_form_register{
+#btn_accept_form_login{
     width: 34%;
     height: 33px;
     color: black;
@@ -115,13 +115,13 @@
     cursor: pointer;
 }
 
-#btn_accept_form_register:hover{
+#btn_accept_form_login:hover{
     transition: background-color 0.3s ease-in-out;
     background-color: var(--verde);
     color: white;
 }
 
-#btn_cancel_form_register{
+#btn_cancel_form_login{
     width: 34%;
     height: 33px;
     color: black;
@@ -130,13 +130,19 @@
     cursor: pointer;
 }
 
-#btn_cancel_form_register:hover{
+#btn_cancel_form_login:hover{
     transition: background-color 0.3s ease-in-out;
     background-color: var(--rojo);
     color: white;
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 480px) {
     
+    #ventana{
+        width: 370px;
+        height: 500px;
+        margin-top: 12%;
+    }    
+
 }

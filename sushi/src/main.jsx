@@ -9,9 +9,11 @@ import Register from "./components/Register.jsx";
 import Navbar from "./components/Navbar.jsx";
 import RegistroPrvider from "./provider/RegistroProvider.jsx";
 import Catalogo_sushi from "./components/Catalogo.jsx";
+import Login from "./components/Login.jsx";
+import UserProvider from "./provider/UserProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RegistroPrvider></RegistroPrvider>
+
   </React.StrictMode>
 );

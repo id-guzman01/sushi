@@ -1,11 +1,20 @@
-import React, {useState} from 'react';
+import {useState, useContext} from 'react';
 import StyleNav from '../styles/navbar.module.css';
 import Logo from '../assets/logo_zen_sushi.png';
+import UserContext from '../context/UserContext';
+import Login from './Login.jsx';
+import Style from '../styles/login.module.css'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {userLog, logOut } = useContext(UserContext);
+  const[menuLogin, setMenuLogin] = useState(false);
 
-
+  const closedLogin = (event) => {
+  event.preventDefault();
+  logOut();
+    
+  }
 
   let handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,12 +30,11 @@ const Navbar = () => {
 
         <a href="#" className={StyleNav.Nav_Enlace} onClick={handleMenuClick}> Menu </a>
         <a href="#" className={StyleNav.Nav_Enlace}> Inicio </a>
-        <a href="#" className={StyleNav.Nav_Enlace}> Login </a>
-        <a href="#" className={StyleNav.Nav_Enlace}> Registro </a>
-
-        <a href="#" className={StyleNav.Nav_Enlace}> logout </a>
+        {!userLog && <a href="#" className={StyleNav.Nav_Enlace}> Registro </a> }
+        {!userLog &&  <a href="#" className={StyleNav.Nav_Enlace} onClick={()=>[]}> Login </a> }
+        {userLog &&<a href="#" className={StyleNav.Nav_Enlace} onClick={closedLogin}> logout </a>}
       </nav>
-      </section>
+    </section>
       <input type="checkbox" className={StyleNav.Nav_input} name="" id={StyleNav.check} checked />
   
         <section className={`${StyleNav.container} ${isMenuOpen ? StyleNav.open : ''}`}>
@@ -41,4 +49,4 @@ const Navbar = () => {
     </header>
   );
 };
-export default Navbar
+export default Navbar;
