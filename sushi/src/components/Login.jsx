@@ -10,7 +10,9 @@ const Login = ({children}) => {
     event.preventDefault();
     const { email, password } = event.target.elements;
     console.log(email.value, password.value);
-    login(email.value, password.value);
+    login(email.value, password.value);   
+
+    
   };
 
   return (<>
