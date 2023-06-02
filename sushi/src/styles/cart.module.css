@@ -215,10 +215,6 @@
   margin-top: 2%;
   border-radius: 7px;
   cursor: pointer;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
 }
 
 #btn_trash_cart:hover {
@@ -239,10 +235,6 @@
   margin-top: 2%;
   border-radius: 7px;
   cursor: pointer;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
 }
 
 #btn_realizar_cart:hover {
@@ -255,6 +247,13 @@
   -ms-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 1020px) {
+  #cart {
+    width: 65%;
+    height: 100%;
+  }
+}  
 
 @media screen and (max-width: 720px) {
   #cart {

@@ -28,7 +28,7 @@ const Products = () => {
         <h2 id={StyleProducts.title_products}>Productos:</h2>
         <article
           className={StyleProducts.card_products}
-          onClick={() => {
+          onClick={(event) => {
             setCategoria("sushi");
           }}
         >
