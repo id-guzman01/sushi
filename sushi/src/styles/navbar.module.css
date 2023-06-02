@@ -1,9 +1,14 @@
-
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#161616;
 }
 
 .container {
@@ -21,15 +26,37 @@
 
 }
 
-ol{
-    width: 100%;
-    list-style: none;
+nav a {
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+    padding-left:30px;
+    
 }
-ol li {
-    display: block;
-    width: 100%;
+
+.container.menu{
+    color: #fbfdce;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    
+
 }
-ol li a{
+.h1nav{
+    border:#ff0000;
+    background: linear-gradient(30deg,#df0155,rgba(136, 14, 79, 0.3));
+    color: #fbfdce;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.continerA{
     color: #fbfdce;
     padding: 15px 10px;
     text-decoration: none;
@@ -40,27 +67,13 @@ ol li a{
     transition: 0.1s;
     overflow: hidden;
     text-transform: capitalize;
-}
-ol li a i{
-    width: 70px;
+    width: 300px;
     font-size: 20px;
-    text-align: center;
+    text-align:left ;
     padding-left:30px;
-    
-}
-
-.container .menu{
-    color: #fbfdce;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    background: linear-gradient(30deg,#df0155,rgba(136, 14, 79, 0.3));
 
 }
-ol li:hover a{
+a:hover{
     color: #00ff15;
     letter-spacing: 3px;
 }
@@ -77,14 +90,14 @@ ol li:hover a{
 }
 
 
-article.opciones {
+nav.opciones {
     position: relative;
-    background: black;
     display: block;
-    width: 100%;
+    width:900%;
     box-sizing: border-box;
     padding: 20px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: start;
 
 }
@@ -92,12 +105,16 @@ article.opciones {
 .Logo {
     width: 85px;
     height: 85px;
+    padding: 0;
+    top: 0;
+    left: 0;
     border-radius: 100%;
     position: absolute;
     margin-left: 90%;
     margin-top: 0px;
     align-self: center;
     border: 3px solid #ff0000;
+    
 }
 
 .Nav_Enlace{
@@ -127,33 +144,36 @@ article.opciones {
 }
 @media screen and (max-width:720px){
     .Logo{
-        margin-left: 80%
+        margin-left: 80%;
+    
+        top: 50px;
     }
-    .Nav-Enlace{
-        width: 20%;
+    .Nav_Enlace{
+        width: 40%;
     }
     .container.open {
         width: 250px;
+    }
+    .opciones{
+        display: flex;
+        flex-wrap: wrap;
     }
     .opciones a:hover{
         color: #00ff15;
 
     }
-    ol li a i{
-        font-size: 15px;
-        
-    }
 
 }
 @media screen and (max-width:670px){
 
-    article.opciones{
+    .opciones{
         display: flex;
-        flex-wrap: wrap;
+    
     }
-    .Nav-Enlace{
-        width: 30%;
+    .Nav_Enlace{
+        width: 40%;
     }
+
     .container.open {
         width: 230px;
     }
@@ -161,10 +181,14 @@ article.opciones {
         color: #00ff15;
         letter-spacing: 1px;
     }
-    ol li a i{
-        font-size: 15px;
-        
+    .header{
+        display: flex;
+    
     }
+    .Logo{
+        top: 50px;
+    }
+
 
 }
 @media screen and (max-width:580px){
@@ -174,20 +198,11 @@ article.opciones {
         width: 75px;
         height: 75px;
     }
-    article.opciones{
-        display: flex;
-        flex-wrap: wrap;
-    }
     .Nav-Enlace{
-        width: 30%;
+        width: 20%;
     }
     .container.open {
         width: 230px;
-    }
-
-    ol li a i{
-        font-size: 15px;
-        
     }
 
 

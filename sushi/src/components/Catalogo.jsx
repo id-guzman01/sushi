@@ -14,150 +14,100 @@ const Catalogo_sushi = () => {
         </picture>
       </section>
       <section id={StyleSushi.card_section}>
-        <h2> Contamos con la siguiente variedad de sushi:</h2>
-        <article id={StyleSushi.card_sushi}>
-          <h2> Futomaki de langostino</h2>
+        <h2 id={StyleSushi.title_section}>
+          Contamos con la siguiente variedad de sushi:
+        </h2>
+        <article className={StyleSushi.card_product}>
+          <h3> Futomaki de langostino</h3>
           <picture>
             <img src={futomaki} alt="futomaki de langostinos" />
           </picture>
+          <p className={StyleSushi.description}>
+            Deliciosa combinación de langostino crujiente y suave, envuelto en
+            una capa de arroz de sushi y alga nori.
+          </p>
           <span className={StyleSushi.content}>Contiene 10 piezas</span>
           <span className={StyleSushi.content}>$25000</span>
-          <span className={StyleSushi.description}>
-            En su interior, encontrarás una deliciosa combinación de langostino
-            crujiente y suave, envuelto en una capa de arroz de sushi y alga
-            nori.
-          </span>
-          <section id={StyleSushi.amount_section}>
-            <h3>Cantidad:</h3>
-            <button>
+          <article className={StyleSushi.btn_amount_product}>
+            <h4 className={StyleSushi.amount_name}>Cantidad:</h4>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-minus"></i>
             </button>
-            <span>1</span>
-            <button>
+            <span className={StyleSushi.span_amount}>1</span>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-plus"></i>
             </button>
-          </section>
-          <button id={StyleSushi.add_button}>Añadir</button>
+          </article>
+          <button id={StyleSushi.btn_add}>Agregar al carrito</button>
         </article>
-        <article id={StyleSushi.card_sushi}>
-          <h2> Futomaki de langostino</h2>
+        <article className={StyleSushi.card_product}>
+          <h3> Futomaki de langostino</h3>
           <picture>
             <img src={futomaki} alt="futomaki de langostinos" />
           </picture>
+          <p className={StyleSushi.description}>
+            Deliciosa combinación de langostino crujiente y suave, envuelto en
+            una capa de arroz de sushi y alga nori.
+          </p>
           <span className={StyleSushi.content}>Contiene 10 piezas</span>
           <span className={StyleSushi.content}>$25000</span>
-          <span className={StyleSushi.description}>
-            En su interior, encontrarás una deliciosa combinación de langostino
-            crujiente y suave, envuelto en una capa de arroz de sushi y alga
-            nori.
-          </span>
-          <section id={StyleSushi.amount_section}>
-            <h3>Cantidad:</h3>
-            <button>
+          <article className={StyleSushi.btn_amount_product}>
+            <h4 className={StyleSushi.amount_name}>Cantidad:</h4>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-minus"></i>
             </button>
-            <span>1</span>
-            <button>
+            <span className={StyleSushi.span_amount}>1</span>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-plus"></i>
             </button>
-          </section>
-          <button id={StyleSushi.add_button}>Añadir</button>
+          </article>
+          <button id={StyleSushi.btn_add}>Agregar al carrito</button>
         </article>
-        <article id={StyleSushi.card_sushi}>
-          <h2> Futomaki de langostino</h2>
+        <article className={StyleSushi.card_product}>
+          <h3> Futomaki de langostino</h3>
           <picture>
             <img src={futomaki} alt="futomaki de langostinos" />
           </picture>
+          <p className={StyleSushi.description}>
+            Deliciosa combinación de langostino crujiente y suave, envuelto en
+            una capa de arroz de sushi y alga nori.
+          </p>
           <span className={StyleSushi.content}>Contiene 10 piezas</span>
           <span className={StyleSushi.content}>$25000</span>
-          <span className={StyleSushi.description}>
-            En su interior, encontrarás una deliciosa combinación de langostino
-            crujiente y suave, envuelto en una capa de arroz de sushi y alga
-            nori.
-          </span>
-          <section id={StyleSushi.amount_section}>
-            <h3>Cantidad:</h3>
-            <button>
+          <article className={StyleSushi.btn_amount_product}>
+            <h4 className={StyleSushi.amount_name}>Cantidad:</h4>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-minus"></i>
             </button>
-            <span>1</span>
-            <button>
+            <span className={StyleSushi.span_amount}>1</span>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-plus"></i>
             </button>
-          </section>
-          <button id={StyleSushi.add_button}>Añadir</button>
+          </article>
+          <button id={StyleSushi.btn_add}>Agregar al carrito</button>
         </article>
-        <article id={StyleSushi.card_sushi}>
-          <h2> Futomaki de langostino</h2>
+        <article className={StyleSushi.card_product}>
+          <h3> Futomaki de langostino</h3>
           <picture>
             <img src={futomaki} alt="futomaki de langostinos" />
           </picture>
+          <p className={StyleSushi.description}>
+            Deliciosa combinación de langostino crujiente y suave, envuelto en
+            una capa de arroz de sushi y alga nori.
+          </p>
           <span className={StyleSushi.content}>Contiene 10 piezas</span>
           <span className={StyleSushi.content}>$25000</span>
-          <span className={StyleSushi.description}>
-            En su interior, encontrarás una deliciosa combinación de langostino
-            crujiente y suave, envuelto en una capa de arroz de sushi y alga
-            nori.
-          </span>
-          <section id={StyleSushi.amount_section}>
-            <h3>Cantidad:</h3>
-            <button>
+          <article className={StyleSushi.btn_amount_product}>
+            <h4 className={StyleSushi.amount_name}>Cantidad:</h4>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-minus"></i>
             </button>
-            <span>1</span>
-            <button>
+            <span className={StyleSushi.span_amount}>1</span>
+            <button className={StyleSushi.btn_icon}>
               <i className="fa-solid fa-plus"></i>
             </button>
-          </section>
-          <button id={StyleSushi.add_button}>Añadir</button>
-        </article>
-        <article id={StyleSushi.card_sushi}>
-          <h2> Futomaki de langostino</h2>
-          <picture>
-            <img src={futomaki} alt="futomaki de langostinos" />
-          </picture>
-          <span className={StyleSushi.content}>Contiene 10 piezas</span>
-          <span className={StyleSushi.content}>$25000</span>
-          <span className={StyleSushi.description}>
-            En su interior, encontrarás una deliciosa combinación de langostino
-            crujiente y suave, envuelto en una capa de arroz de sushi y alga
-            nori.
-          </span>
-          <section id={StyleSushi.amount_section}>
-            <h3>Cantidad:</h3>
-            <button>
-              <i className="fa-solid fa-minus"></i>
-            </button>
-            <span>1</span>
-            <button>
-              <i className="fa-solid fa-plus"></i>
-            </button>
-          </section>
-          <button id={StyleSushi.add_button}>Añadir</button>
-        </article>
-        <article id={StyleSushi.card_sushi}>
-          <h2> Futomaki de langostino</h2>
-          <picture>
-            <img src={futomaki} alt="futomaki de langostinos" />
-          </picture>
-          <span className={StyleSushi.content}>Contiene 10 piezas</span>
-          <span className={StyleSushi.content}>$25000</span>
-          <span className={StyleSushi.description}>
-            En su interior, encontrarás una deliciosa combinación de langostino
-            crujiente y suave, envuelto en una capa de arroz de sushi y alga
-            nori.
-          </span>
-          <section id={StyleSushi.amount_section}>
-            <h3>Cantidad:</h3>
-            <button>
-              <i className="fa-solid fa-minus"></i>
-            </button>
-            <span>1</span>
-            <button>
-              <i className="fa-solid fa-plus"></i>
-            </button>
-          </section>
-          <button id={StyleSushi.add_button}>Añadir</button>
+          </article>
+          <button id={StyleSushi.btn_add}>Agregar al carrito</button>
         </article>
       </section>
     </>

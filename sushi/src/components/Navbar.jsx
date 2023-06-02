@@ -13,41 +13,31 @@ const Navbar = () => {
 
   return (
     <header>
-<article className={StyleNav.opciones}>
-        <img className={StyleNav.Logo} src={Logo} />
-        <a href="#" className={StyleNav.Nav_Enlace} onClick={handleMenuClick}>
-          Menu
-        </a>
-        <a href="#" className={StyleNav.Nav_Enlace}>
-          Inicio
-        </a>
+    <section className={StyleNav.header}>
+      <picture>
+        <img className={StyleNav.Logo} src={Logo} alt='Logo_ZenSushi'/>
+      </picture>
+      <nav className={StyleNav.opciones}>
+
+        <a href="#" className={StyleNav.Nav_Enlace} onClick={handleMenuClick}> Menu </a>
+        <a href="#" className={StyleNav.Nav_Enlace}> Inicio </a>
         <a href="#" className={StyleNav.Nav_Enlace}> Login </a>
         <a href="#" className={StyleNav.Nav_Enlace}> Registro </a>
 
         <a href="#" className={StyleNav.Nav_Enlace}> logout </a>
-      </article>
+      </nav>
+      </section>
       <input type="checkbox" className={StyleNav.Nav_input} name="" id={StyleNav.check} checked />
-      <article className={`${StyleNav.container} ${isMenuOpen ? StyleNav.open : ''}`}>
-        <section className={StyleNav.menu}>Zen Sushi</section>
-        <ol>
-          <li>
-            <a href="#">
-              <i className="">Platos principales</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="">Bebidas</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="">Postres</i>
-            </a>
-          </li>
-        </ol>
-      </article>
-        
+  
+        <section className={`${StyleNav.container} ${isMenuOpen ? StyleNav.open : ''}`}>
+        <h1 className={StyleNav.h1nav}>Zen Sushi</h1>
+        <nav className={StyleNav.menu}>
+            <a href="#" className={StyleNav.continerA}> Platos principales </a>
+            <a href="#" className={StyleNav.continerA}> Bebidas </a>
+            <a href="#" className={StyleNav.continerA}> Postres </a>
+   
+      </nav>
+      </section>    
     </header>
   );
 };
