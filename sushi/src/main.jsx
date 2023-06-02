@@ -23,12 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <CategoriaProvider>
           <BebidasProvider>
             <PostresProvider>
-              <Products />
-              <Cart />
-              <Sushi />
-              <Bebidas />
-              <Postres />
-              <Footer />
+                <App />
             </PostresProvider>
           </BebidasProvider>
         </CategoriaProvider>
