@@ -72,14 +72,6 @@ const Login = ({ children }) => {
                 {children}
               </fieldset>
             </form>
-            {userError && <p>{userError}</p>}
-            {userSuccess && <p>{userSuccess}</p>}
-            {user && (
-              <div>
-                <h3>Welcome, {user.name}!</h3>
-                <p>Email: {user.correo}</p>
-              </div>
-            )}
           </article>
         </section>
       </main>
