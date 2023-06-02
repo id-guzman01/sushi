@@ -3,10 +3,13 @@ import StyleNav from "../styles/navbar.module.css";
 import Logo from "../assets/logo_zen_sushi.png";
 import UserContext from "../context/UserContext";
 import AuthContext from "../context/AuthContext";
+import CategoriaContext from "../context/CategoriaContext"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { userLog, logOut } = useContext(UserContext);
+
+  const { setCategoria } = useContext(CategoriaContext);
 
   const closedLogin = (event) => {
     event.preventDefault();
@@ -69,13 +72,19 @@ const Navbar = () => {
       >
         <h1 className={StyleNav.h1nav}>Zen Sushi</h1>
         <nav className={StyleNav.menu}>
-          <a href="#" className={StyleNav.continerA}>
+          <a href="#" className={StyleNav.continerA} onClick={() => {
+            setCategoria("sushi");
+          }}>
             Sushi
           </a>
-          <a href="#" className={StyleNav.continerA}>
+          <a href="#" className={StyleNav.continerA} onClick={() => {
+            setCategoria("bebidas");
+          }}>
             Bebidas
           </a>
-          <a href="#" className={StyleNav.continerA}>
+          <a href="#" className={StyleNav.continerA} onClick={() => {
+            setCategoria("postres");
+          }}>
             Postres
           </a>
         </nav>
